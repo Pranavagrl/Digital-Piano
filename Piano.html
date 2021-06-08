@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Piano </title>
+    <style>
+        body {
+            background-color: gray;
+            position: relative;
+            padding-right: 200px;
+            display: block;
+            color: gold;
+            box-decoration-break: initial;
+            left: 140px;
+            top: 40px;
+
+        }
+
+        .C1_Note {
+            color: black;
+            position: absolute;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            z-index: 50;
+            background-color: white;
+            cursor: pointer;
+            left: 365px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .D1_Note {
+            position: absolute;
+            z-index: 51;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 60px;
+            background-color: white;
+            cursor: pointer;
+            left: 369px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .E1_Note {
+            position: absolute;
+            z-index: 53;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 120px;
+            background-color: white;
+            cursor: pointer;
+            left: 373px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .F1_Note {
+            position: absolute;
+            z-index: 55;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 180px;
+            background-color: white;
+            cursor: pointer;
+            left: 377px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .G1_Note {
+            position: absolute;
+            z-index: 56;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 240px;
+            background-color: white;
+            cursor: pointer;
+            left: 380px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .A1_Note {
+            position: absolute;
+            z-index: 58;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 300px;
+            background-color: white;
+            cursor: pointer;
+            left: 385px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .B1_Note {
+            position: absolute;
+            z-index: 60;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 360px;
+            background-color: white;
+            cursor: pointer;
+            left: 389px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .C2_Note {
+            position: absolute;
+            z-index: 62;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 420px;
+            background-color: white;
+            cursor: pointer;
+            left: 392px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .D2_Note {
+            position: absolute;
+            z-index: 63;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 480px;
+            background-color: white;
+            cursor: pointer;
+            left: 397px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .E2_Note {
+            position: absolute;
+            z-index: 65;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 540px;
+            background-color: white;
+            cursor: pointer;
+            left: 401px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .F2_Note {
+            position: absolute;
+            z-index: 67;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 600px;
+            background-color: white;
+            cursor: pointer;
+            left: 404px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .G2_Note {
+            position: absolute;
+            z-index: 69;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 660px;
+            background-color: white;
+            cursor: pointer;
+            left: 407px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .A2_Note {
+            position: absolute;
+            z-index: 71;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 720px;
+            background-color: white;
+            cursor: pointer;
+            left: 412px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .B2_Note {
+            position: absolute;
+            z-index: 73;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 780px;
+            background-color: white;
+            cursor: pointer;
+            left: 416px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .C3_Note {
+            position: absolute;
+            z-index: 75;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 840px;
+            background-color: white;
+            cursor: pointer;
+            left: 420px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .D3_Note {
+            position: absolute;
+            z-index: 77;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 900px;
+            background-color: white;
+            cursor: pointer;
+            left: 424px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .E3_Note {
+            position: absolute;
+            z-index: 79;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 960px;
+            background-color: white;
+            cursor: pointer;
+            left: 429px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .F3_Note {
+            position: absolute;
+            z-index: 81;
+            color: black;
+            padding-top: 400px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            margin-left: 1020px;
+            background-color: white;
+            cursor: pointer;
+            left: 432px;
+            top: 142px;
+            box-shadow: 2px 2px crimson;
+        }
+
+        .Cs1_Note {
+            position: absolute;
+            z-index: 52;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 26px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 364px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Ds1_Note {
+            position: absolute;
+            z-index: 54;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 90px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 370px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Fs1_Note {
+            position: absolute;
+            z-index: 57;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 190px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 392px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Gs1_Note {
+            position: absolute;
+            z-index: 59;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 254px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 396px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .As1_Note {
+            position: absolute;
+            z-index: 61;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 320px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 400px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Cs2_Note {
+            position: absolute;
+            z-index: 64;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 416px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 424px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Ds2_Note {
+            position: absolute;
+            z-index: 66;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 482px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 428px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Fs2_Note {
+            position: absolute;
+            z-index: 70;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 580px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 450px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Gs2_Note {
+            position: absolute;
+            z-index: 72;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 644px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 454px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .As2_Note {
+            position: absolute;
+            z-index: 74;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 709px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 460px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Cs3_Note {
+            position: absolute;
+            z-index: 78;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 815px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 470px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        .Ds3_Note {
+            position: absolute;
+            z-index: 80;
+            color: white;
+            padding-top: 250px;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 18px;
+            margin-left: 879px;
+            background-color: black;
+            border-color: black;
+            cursor: pointer;
+            left: 475px;
+            top: 142px;
+            box-shadow: 2px 2px aqua;
+        }
+
+        button.ChangeColor {
+            text-align: center;
+            border: 5px solid;
+            font-family: Algerian;
+            color: white;
+            background-color: black;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <div id="div1">
+            <h1><u><b>
+                        <font color=cream>Digital Piano</font>
+                    </b></u></h1>
+
+            <button class="ChangeColor" onclick="change()" align="center">Change Color</button>
+
+            <button class="Cs1_Note" id="Cs1" onclick="Cs1Note.play()"> C#1 </button>
+            <button class="Ds1_Note" id="Ds1" onclick="Ds1Note.play()"> D#1 </button>
+            <button class="Fs1_Note" id="Fs1" onclick="Fs1Note.play()"> F#1 </button>
+            <button class="Gs1_Note" id="Gs1" onclick="Gs1Note.play()"> G#1 </button>
+            <button class="As1_Note" id="As1" onclick="As1Note.play()"> A#1 </button>
+            <button class="Cs2_Note" id="Cs2" onclick="Cs2Note.play()"> C#2 </button>
+            <button class="Ds2_Note" id="Ds2" onclick="Ds2Note.play()"> D#2 </button>
+            <button class="Fs2_Note" id="Fs2" onclick="Fs2Note.play()"> F#2 </button>
+            <button class="Gs2_Note" id="Gs2" onclick="Gs2Note.play()"> G#2 </button>
+            <button class="As2_Note" id="As2" onclick="As2Note.play()"> A#2 </button>
+            <button class="Cs3_Note" id="Cs3" onclick="Cs3Note.play()"> C#3 </button>
+            <button class="Ds3_Note" id="Ds3" onclick="Ds3Note.play()"> D#3 </button>
+
+            <button class="C1_Note" id="C1" onclick="C1Note.play()"> C1 </button>
+            <button class="D1_Note" id="D1" onclick="D1Note.play()"> D1 </button>
+            <button class="E1_Note" id="E1" onclick="E1Note.play()"> E1 </button>
+            <button class="F1_Note" id="F1" onclick="F1Note.play()"> F1 </button>
+            <button class="G1_Note" id="G1" onclick="G1Note.play()"> G1 </button>
+            <button class="A1_Note" id="A1" onclick="A1Note.play()"> A1 </button>
+            <button class="B1_Note" id="B1" onclick="B1Note.play()"> B1 </button>
+            <button class="C2_Note" id="C2" onclick="C2Note.play()"> C2 </button>
+            <button class="D2_Note" id="D2" onclick="D2Note.play()"> D2 </button>
+            <button class="E2_Note" id="E2" onclick="E2Note.play()"> E2 </button>
+            <button class="F2_Note" id="F2" onclick="F2Note.play()"> F2 </button>
+            <button class="G2_Note" id="G2" onclick="G2Note.play()"> G2 </button>
+            <button class="A2_Note" id="A2" onclick="A2Note.play()"> A2 </button>
+            <button class="B2_Note" id="B2" onclick="B2Note.play()"> B2 </button>
+            <button class="C3_Note" id="C3" onclick="C3Note.play()"> C3 </button>
+            <button class="D3_Note" id="D3" onclick="D3Note.play()"> D3 </button>
+            <button class="E3_Note" id="E3" onclick="E3Note.play()"> E3 </button>
+            <button class="F3_Note" id="F3" onclick="F3Note.play()"> F3 </button>
+
+        </div>
+
+    </center>
+
+
+    <script>
+
+        function change() {
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("C1").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("D1").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("E1").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("F1").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("G1").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("A1").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("B1").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("C2").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("D2").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("E2").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("F2").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("G2").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("A2").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("B2").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("C3").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("D3").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("E3").style.background = mycolor;
+
+            var r = Math.floor(Math.random() * 256);
+            var a = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            document.getElementById("F3").style.background = mycolor;
+
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Cs1").style.background = mycolor;
+
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Ds1").style.background = mycolor;
+
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Fs1").style.background = mycolor;
+
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Gs1").style.background = mycolor;
+
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("As1").style.background = mycolor;
+
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Cs2").style.background = mycolor;
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Ds2").style.background = mycolor;
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Fs2").style.background = mycolor;
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Gs2").style.background = mycolor;
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("As2").style.background = mycolor;
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Cs3").style.background = mycolor;
+            // var r = Math.floor(Math.random() * 256);
+            // var a = Math.floor(Math.random() * 256);
+            // var b = Math.floor(Math.random() * 256);
+            // var mycolor = "rgb(" + r + "," + a + "," + b + ")";
+
+            // document.getElementById("Ds3").style.background = mycolor;
+
+        }
+
+        var C1Note = new Audio()
+        C1Note.src = "C3.mp3";
+
+        var D1Note = new Audio()
+        D1Note.src = "D3.mp3";
+
+        var E1Note = new Audio()
+        E1Note.src = "E3.mp3";
+
+        var F1Note = new Audio()
+        F1Note.src = "F3.mp3";
+
+        var G1Note = new Audio()
+        G1Note.src = "G3.mp3";
+
+        var A1Note = new Audio()
+        A1Note.src = "A3.mp3";
+
+        var B1Note = new Audio()
+        B1Note.src = "B3.mp3";
+
+        var C2Note = new Audio()
+        C2Note.src = "C4.mp3";
+
+        var D2Note = new Audio()
+        D2Note.src = "D4.mp3";
+
+        var E2Note = new Audio()
+        E2Note.src = "E4.mp3";
+
+        var F2Note = new Audio()
+        F2Note.src = "F4.mp3";
+
+        var G2Note = new Audio()
+        G2Note.src = "G4.mp3";
+
+        var A2Note = new Audio()
+        A2Note.src = "A4.mp3";
+
+        var B2Note = new Audio()
+        B2Note.src = "B4.mp3";
+
+        var C3Note = new Audio()
+        C3Note.src = "C5.mp3";
+
+        var D3Note = new Audio()
+        D3Note.src = "D5.mp3";
+
+        var E3Note = new Audio()
+        E3Note.src = "E5.mp3";
+
+        var F3Note = new Audio()
+        F3Note.src = "F5.mp3";
+
+        var Cs1Note = new Audio()
+        Cs1Note.src = "Cs3.mp3";
+
+        var Ds1Note = new Audio()
+        Ds1Note.src = "Ds3.mp3";
+
+        var Fs1Note = new Audio()
+        Fs1Note.src = "Fs3.mp3";
+
+        var Gs1Note = new Audio()
+        Gs1Note.src = "Gs3.mp3";
+
+        var As1Note = new Audio()
+        As1Note.src = "As3.mp3";
+
+        var Cs2Note = new Audio()
+        Cs2Note.src = "Cs4.mp3";
+
+        var Ds2Note = new Audio()
+        Ds2Note.src = "Ds4.mp3";
+
+        var Fs2Note = new Audio()
+        Fs2Note.src = "Fs4.mp3";
+
+        var Gs2Note = new Audio()
+        Gs2Note.src = "Gs4.mp3";
+
+        var As2Note = new Audio()
+        As2Note.src = "As4.mp3";
+
+        var Cs3Note = new Audio()
+        Cs3Note.src = "Cs5.mp3";
+
+        var Ds3Note = new Audio()
+        Ds3Note.src = "Ds5.mp3";
+
+    </script>
+
+</body>
+
+</html>
